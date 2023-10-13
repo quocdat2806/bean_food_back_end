@@ -1,12 +1,18 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const { Schema, Types } = mongoose;
+mongoose.set("strictQuery", false);
 
 const userSchema = new Schema(
   {
     name: String,
-    email: { type: String, default: "" }, // String is shorthand for {type: String}
-    phone: { type: String, default: "" },
-    avatar: { type: String, default: "" },
+    email: String, // String is shorthand for {type: String}
+    phone: String,
+    avatar: String,
+    password: String,
+    name: String,
+    role: String,
+    birthday: String,
+    gender: String,
   },
   {
     timestamps: true,
